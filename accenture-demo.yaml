@@ -1,0 +1,32 @@
+assets:
+    - name: party
+      properties:
+          - name: partyId
+            type: string
+            mandatory: true
+            id: true
+            validate: min(11),max(11)
+          - name: partyName
+            type: string
+            mandatory: true
+      methods:
+          crud: [create, getById, update, delete]
+          others: [getHistoryById, getByRange]
+    - name: vote
+      properties:
+        - name: validationNumber
+          type: string
+          mandatory: true
+          id: true
+        - name: voteTimestamp
+          type: date
+          mandatory: true
+        - name: preferredPartyId
+          type: string
+          mandatory: true
+      methods:
+        crud: [create, getById, update, delete]
+        others: [getHistoryById, getByRange]
+customMethods:
+    - executeQuery
+    - "vote(validationNumber: string, preferredPartyId: string, voteTimestamp: Date)"

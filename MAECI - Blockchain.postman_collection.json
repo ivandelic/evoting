@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "dec19bfe-6d0d-4fdc-a365-4a4b12526cd0",
+		"name": "MAECI - Blockchain",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createParty",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chaincode\": \"{{chaincode3}}\",\r\n    \"args\": [\r\n        \"createParty\",\r\n        \"{\\\"partyId\\\": \\\"22222222222\\\", \\\"partyName\\\": \\\"Partito Democratico\\\"}\"\r\n    ],\r\n    \"timeout\": 18000,\r\n    \"sync\": true\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/transactions",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateParty",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chaincode\": \"{{chaincode3}}\",\r\n    \"args\": [\r\n        \"updateParty\",\r\n        \"{\\\"partyId\\\": \\\"22222222222\\\", \\\"partyName\\\": \\\"Partito Democratico2\\\"}\"\r\n    ],\r\n    \"timeout\": 18000,\r\n    \"sync\": true\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/transactions",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteParty",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chaincode\": \"{{chaincode3}}\",\r\n    \"args\": [\r\n        \"deleteParty\",\r\n        \"22222222222\"\r\n    ],\r\n    \"timeout\": 18000,\r\n    \"sync\": true\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/transactions",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPartyByRange",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chaincode\": \"{{chaincode3}}\",\r\n    \"args\": [\r\n        \"getPartyByRange\",\r\n        \"\",\r\n        \"\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/chaincode-queries",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"chaincode-queries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPartyHistoryById",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chaincode\": \"{{chaincode3}}\",\r\n    \"args\": [\r\n        \"getPartyHistoryById\",\r\n        \"22222222222\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/chaincode-queries",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"chaincode-queries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chaincode\":\"{{chaincode3}}\",\r\n    \"args\": [\r\n        \"vote\",\r\n        \"A1234567892\", \r\n        \"22222222222\",\r\n        \"2021-07-15\"\r\n        ],\r\n    \"timeout\":18000,\r\n    \"sync\":true\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/transactions",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVoteByRange",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chaincode\": \"{{chaincode3}}\",\r\n    \"args\": [\r\n        \"getVoteByRange\",\r\n        \"\",\r\n        \"\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/chaincode-queries",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"chaincode-queries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "executeQuery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chaincode\": \"{{chaincode3}}\",\r\n    \"args\": [\r\n        \"executeQuery\",\r\n        \"SELECT COUNT(json_extract(valueJson, '$.validationNumber')) AS cnt FROM <STATE> WHERE json_extract(valueJson, '$.assetType') = 'vote' AND json_extract(valueJson, '$.preferredPartyId') = '22222222222'\"\r\n    ],\r\n    \"timeout\": 18000,\r\n    \"sync\": true\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/transactions",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "welcomeToOracle123Blockchain1",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "obprestuser",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "channelId",
+			"value": "person-employer-master-data"
+		}
+	]
+}

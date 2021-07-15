@@ -1,0 +1,10 @@
+{
+  "name": "voting_quick_demo",
+  "description": "Chaincode package for voting_quick_demo",
+  "chaincodeName": "voting_quick_demo",
+  "chaincodeType": "node",
+  "configFileLocation": "/home/dlxeee/dev/appbuilder/accenture-demo/accenture-demo.yaml",
+  "appBuilderVersion": "21.2.3",
+  "nodeVersion": "v12.22.1",
+  "tokenUser": "admin"
+}
